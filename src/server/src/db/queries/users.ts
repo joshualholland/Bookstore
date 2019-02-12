@@ -1,6 +1,6 @@
 import { Query } from '../index';
 
-const addUser = async (columns: string, values: any[]) => Query(`INSERT INTO users(${columns}) VALUES(?)`, values);
+const addUser = async (columns: any, values: any[]) => Query(`INSERT INTO users(${columns}) VALUES(?)`, values);
 
 const findByEmail = (email: string) => Query(`SELECT * FROM users WHERE email = "${email}" LIMIT 1`);
 
