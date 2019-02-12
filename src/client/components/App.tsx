@@ -6,6 +6,7 @@ import Navbar from './Navbar';
 import Home from './Home';
 import Login from './auth/login';
 import Register from './auth/register';
+import Admin from './auth/admin';
 
 export default class App extends React.Component {
     render() {
@@ -15,10 +16,12 @@ export default class App extends React.Component {
                     <Navbar />
                     <Switch>
                         <Route exact path='/' component={Home} />
-                        <Route exact path ='/login' componenet={Login} />
+                        <Route exact path='/login' component={Login} />
+                        <Route exact path='/register' component={Register} />
+                        <Route exact path='/admin' component={Admin} />
                     </Switch>
                 </>
             </Router>
         )
     }
-}
+};

@@ -30,7 +30,7 @@ class Register extends React.Component<IRegisterProps, IRegisterState> {
             <main className='container'>
                 <section className='row my-3'>
                     <div className="col-md-12">
-                        <form className='form-group bg-success rounded shadow-lg' onSubmit={(e) => this.handleSubmit(e)}>
+                        <form className='form-group bg-secondary rounded shadow-lg' onSubmit={(e) => this.handleSubmit(e)}>
                             <label className='text-primary'>Email</label>
                             <input
                                 type='email'
@@ -42,7 +42,7 @@ class Register extends React.Component<IRegisterProps, IRegisterState> {
                                 className='form-control mb-3'
                                 onChange={(e: React.ChangeEvent<HTMLInputElement>) => this.setState({ password: e.target.value })} />
                             <div className='text-center'>
-                                <button type='submit' className='btn btn-danger mb-2'>Register</button>
+                                <button type='submit' className='btn btn-primary mb-2'>Register</button>
                             </div>
                         </form>
                     </div>

@@ -18,8 +18,6 @@ export default class Login extends React.Component<ILoginProps, ILoginState> {
     async componentDidMount() {
         if (User && User.role === 'admin') {
             this.props.history.push('/admin')
-        } if (User && User.role === 'guest') {
-            this.props.history.push('/account');
         }
     }
 
@@ -63,7 +61,7 @@ export default class Login extends React.Component<ILoginProps, ILoginState> {
                 <main className='container'>
                     <section className='row my-3'>
                         <div className="col-md-12">
-                            <form className='form-group bg-success rounded shadow-lg' onSubmit={(e) => this.login(e)}>
+                            <form className='form-group bg-secondary rounded shadow-lg' onSubmit={(e) => this.login(e)}>
                                 <label className='text-primary'>Email</label>
                                 <input
                                     type='email'
@@ -77,7 +75,7 @@ export default class Login extends React.Component<ILoginProps, ILoginState> {
                                     value={this.state.password}
                                     onChange={(e: React.ChangeEvent<HTMLInputElement>) => this.setState({ password: e.target.value })} />
                                 <div className='text-center'>
-                                    <button type='submit' className='btn btn-danger'>Login</button>
+                                    <button type='submit' className='btn btn-primary'>Login</button>
                                 </div>
                             </form>
                             <Link to='/register' className='text-primary'>Not a registered user? Register Here!</Link>

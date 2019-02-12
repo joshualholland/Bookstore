@@ -14,10 +14,10 @@ const Navbar = () => {
                         <Link to='/' className="nav-link text-white" style={{ fontWeight: 'bold' }}>Home <span className="sr-only">(current)</span></Link>
                     </li>
                     <li className="nav-item mr-5">
-                        <Link to='/players' className="nav-link text-white" style={{ fontWeight: 'bold' }}>Books</Link>
+                        <Link to='/books' className="nav-link text-white" style={{ fontWeight: 'bold' }}>Books</Link>
                     </li>
                     <li className="nav-item mr-5">
-                        <Link to='/account' className='nav-link text-white' style={{ fontWeight: 'bold' }}>Login</Link>
+                        <Link to='/login' className='nav-link text-white' style={{ fontWeight: 'bold' }}>Login</Link>
                     </li>
                 </ul>
             </div>
