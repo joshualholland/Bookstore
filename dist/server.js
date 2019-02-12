@@ -86,17 +86,6 @@
 /************************************************************************/
 /******/ ({
 
-/***/ "./src/server/routes.ts":
-/*!******************************!*\
-  !*** ./src/server/routes.ts ***!
-  \******************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-eval("throw new Error(\"Module build failed (from ./node_modules/ts-loader/index.js):\\nError: ENOENT: no such file or directory, open 'C:\\\\Users\\\\Josh's Computer\\\\Documents\\\\Source\\\\Fullstack\\\\Final Project\\\\bookstore\\\\src\\\\server\\\\routes.ts'\");\n\n//# sourceURL=webpack:///./src/server/routes.ts?");
-
-/***/ }),
-
 /***/ "./src/server/server.ts":
 /*!******************************!*\
   !*** ./src/server/server.ts ***!
@@ -105,7 +94,19 @@ eval("throw new Error(\"Module build failed (from ./node_modules/ts-loader/index
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-eval("\r\nObject.defineProperty(exports, \"__esModule\", { value: true });\r\nvar path = __webpack_require__(/*! path */ \"path\");\r\nvar express = __webpack_require__(/*! express */ \"express\");\r\nvar routes_1 = __webpack_require__(/*! ./routes */ \"./src/server/routes.ts\");\r\nvar app = express();\r\nvar p = path.join(__dirname, '../public');\r\nconsole.log(p);\r\napp.use(express.static(p));\r\napp.use(routes_1.default);\r\nvar port = process.env.PORT || 3000;\r\napp.listen(port, function () {\r\n    console.log(\"Server listening on port: \" + port);\r\n});\r\n\n\n//# sourceURL=webpack:///./src/server/server.ts?");
+eval("\r\nObject.defineProperty(exports, \"__esModule\", { value: true });\r\nvar path = __webpack_require__(/*! path */ \"path\");\r\nvar express = __webpack_require__(/*! express */ \"express\");\r\nvar routes_1 = __webpack_require__(/*! ./src/routes */ \"./src/server/src/routes/index.ts\");\r\nvar app = express();\r\nvar p = path.join(__dirname, '../public');\r\nconsole.log(p);\r\napp.use(express.static(p));\r\napp.use(express.json());\r\napp.use(routes_1.default);\r\nvar port = process.env.PORT || 3000;\r\napp.listen(port, function () {\r\n    console.log(\"Server listening on port: \" + port);\r\n});\r\n\n\n//# sourceURL=webpack:///./src/server/server.ts?");
+
+/***/ }),
+
+/***/ "./src/server/src/routes/index.ts":
+/*!****************************************!*\
+  !*** ./src/server/src/routes/index.ts ***!
+  \****************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+eval("\r\nObject.defineProperty(exports, \"__esModule\", { value: true });\r\nvar express = __webpack_require__(/*! express */ \"express\");\r\nvar router = express.Router();\r\nrouter.get('/api/hello', function (req, res, next) {\r\n    res.json('World');\r\n});\r\nexports.default = router;\r\n\n\n//# sourceURL=webpack:///./src/server/src/routes/index.ts?");
 
 /***/ }),
 
