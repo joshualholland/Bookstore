@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { Link } from 'react-router-dom';
+import { Link, RouteComponentProps } from 'react-router-dom';
 import { json } from '../../utils/api';
 
 export default class Admin extends React.Component<IAdminProps, IAdminState> {
@@ -34,7 +34,7 @@ export default class Admin extends React.Component<IAdminProps, IAdminState> {
                             <p className='card-text'>{book.category}</p>
                             <p className='card-text'>{book.price}</p>
                         </div>
-                        <Link to='edit' className='btn btn-sm btn-primary'>Edit this Book</Link>
+                        <Link to={`/edit/${book.id}`} className='btn btn-sm btn-primary'>Edit this Book</Link>
                         <button className='btn btn-sm btn-outline-danger' onClick={() => this.deleteBook(book.id)}>Delete</button>
                     </div>
                 )
@@ -42,9 +42,17 @@ export default class Admin extends React.Component<IAdminProps, IAdminState> {
         )
     }
 
+    render() {
+        return (
+            <div className="container">
+                {this.returnBooks()}
+            </div>
+        )
+    }
+
 }
 
-interface IAdminProps { };
+interface IAdminProps extends RouteComponentProps<{ id: string }> { };
 interface IAdminState {
     books: any[]
 };

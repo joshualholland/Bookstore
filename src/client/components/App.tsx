@@ -7,6 +7,7 @@ import Home from './Home';
 import Login from './auth/login';
 import Register from './auth/register';
 import Admin from './auth/admin';
+import Edit from './auth/edit';
 
 export default class App extends React.Component {
     render() {
@@ -19,6 +20,7 @@ export default class App extends React.Component {
                         <Route exact path='/login' component={Login} />
                         <Route exact path='/register' component={Register} />
                         <Route exact path='/admin' component={Admin} />
+                        <Route exact path='/edit/:id' component={Edit} />
                     </Switch>
                 </>
             </Router>
