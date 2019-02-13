@@ -8,6 +8,8 @@ import Login from './auth/login';
 import Register from './auth/register';
 import Admin from './auth/admin';
 import Edit from './auth/edit';
+import Books from './Books';
+import Post from './auth/Post';
 
 export default class App extends React.Component {
     render() {
@@ -21,6 +23,8 @@ export default class App extends React.Component {
                         <Route exact path='/register' component={Register} />
                         <Route exact path='/admin' component={Admin} />
                         <Route exact path='/edit/:id' component={Edit} />
+                        <Route exact path='/books' component={Books} />
+                        <Route exact path='/post' component={Post} />
                     </Switch>
                 </>
             </Router>

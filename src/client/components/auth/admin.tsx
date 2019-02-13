@@ -44,9 +44,12 @@ export default class Admin extends React.Component<IAdminProps, IAdminState> {
 
     render() {
         return (
+            <>
+            <h3 className='text-primary'>Need to post a book? Click <Link className='text-primary' to='/post'>Here</Link></h3>
             <div className="container">
                 {this.returnBooks()}
             </div>
+            </>
         )
     }
 
